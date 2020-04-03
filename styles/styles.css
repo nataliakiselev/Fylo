@@ -1,0 +1,447 @@
+html {
+    box-sizing: border-box;
+    font-size: 10px;
+  }
+  
+  body {
+    font-size: 14px;
+    color: #fff;
+    font-family: "Open Sans", sans-serif;
+    margin: 0;
+    background-color: hsl(218, 28%, 13%);
+  }
+  
+  *,
+  *::before,
+  *::after {
+    box-sizing: inherit;
+  }
+  h1, h2, h3, h4, button {
+    font-family: Raleway;
+  }
+  a {
+    color: inherit;
+    text-decoration: none;
+    /* You MUST make sure that links stand out from nomal text though...*/
+  }
+  
+  /*
+      a:hover,
+      a:focus {
+        text-decoration: underline;
+      }
+    */
+  
+  img {
+    /* This means that it can be less than 100% of the width of its parent IF the image is INTRINSICALLY smaller */
+    max-width: 100%;
+  
+    height: auto;
+    /* 'auto' is the initial value for height BUT for images (and other elements which have an intrinic height) that is not the case. To make an image responsive you set one dimension (usually width) to [max-]width: 100%; and the other to 'auto' to ensure it keeps aspect ratio. 'auto' basically tells the browser to decide. */
+    vertical-align: middle;
+    /* minor vertical centering. Works for images IF there is a baseline (i.e. they are displayed inline or inline-block) */
+  }
+  
+  /* Because we us <ul>s for lists that we don't always want bulletted. */
+  ul {
+    list-style: none;
+    padding-left: 0;
+  }
+  
+  /* To make actual bulletted lists */
+  ul.typographic {
+    list-style: initial;
+    padding-left: inital;
+  }
+  
+  /* For 'accessibility text'. If your button only has an image inside it that isn't good for accessibility. Put a span inside there and give it this class and put some descriptive text for what the button does into the span. */
+  .sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border: 0;
+  }
+  .sr-only-focusable:active,
+  .sr-only-focusable:focus {
+    position: static;
+    width: auto;
+    height: auto;
+    overflow: visible;
+    clip: auto;
+    white-space: normal;
+  }  
+button {
+  color: #fff;
+  display: inline-block;
+  border: none;
+  border-radius: 25px;
+  text-align: center;
+}
+.intro {
+  background-color: hsl(176, 68%, 64%);
+}
+
+.container {
+  max-width: 1440px;
+  margin: auto;
+  width: 80%;
+}
+
+.container.header {
+  width: 100%;
+}
+section {
+  padding: 50px 0;
+}
+
+/* /* Header  */
+.page-header {
+  background-color: hsl(217, 28%, 15%);
+  background-image: url(../images/bg-curvy-mobile.svg);
+
+  background-position: bottom center;
+  background-size: contain;
+  background-repeat: no-repeat;
+  }
+
+  .top-row {
+    padding: 30px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed;
+    z-index: 2;
+    background-color: hsl(217, 28%, 15%);
+    width: 100%;
+  }
+
+  .main-nav {
+    display: flex;
+    text-align: center;
+  }
+  
+  .main-nav a{
+    padding: 10px 10px;
+    font-size: 1.1rem;
+  }
+
+.intro-header {
+  
+  justify-content: center;
+ 
+  width: 100%; 
+  z-index: 0;
+  padding-top: 150px;
+  padding-bottom: 50px;
+}
+
+.intro-text {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  text-align: center;
+  padding-top: 70px;
+  width: 70%;
+  margin: auto;
+  /* position: absolute;
+  bottom: -200px; */
+}
+
+.hero-image {
+  width: 80%;
+  margin: auto;
+}
+
+@media (min-width: 601px){
+  .page-header {
+  background-image: url(../images/bg-curvy-desktop.svg);
+  } 
+  .intro-text {
+  width: 50%;
+  }
+  .hero-image {
+  width: 50%;
+  } 
+}
+
+h1 {
+  font-size: 2rem;
+  line-height: 1.5em;;
+}
+
+.container.features {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  padding-top: 50px;
+}
+.feature {
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+  /* flex-direction: column; */
+  /* align-content: center; */
+  justify-content: center;
+  text-align: center;
+  margin-bottom: 50px;
+}
+.icon {
+  display: block;
+  margin: 20px 50px;
+  flex-basis: 100%;
+}
+
+.intro {
+  padding: 14px 60px;
+}
+.details {
+  color: hsl(176, 68%, 64%);
+  border-bottom: 1px solid hsl(176, 68%, 64%);
+}
+a.details::after {
+content: " ";
+height: 1em;
+background-image: url(../images/icon-arrow.svg);
+width:1em;
+display: inline-block;
+}
+
+@media (min-width: 601px) {
+  .container.features {
+    width: 60%;
+  }
+  .feature:nth-child(odd) {
+    margin-right: 10%;
+  }
+  .feature {
+    width: calc(50% - 5%);
+  }
+}
+
+.container.info {
+  display: flex;
+  flex-flow: row wrap;
+}
+
+.productive-image, 
+.info-text {
+  width: 100%
+}
+
+@media (min-width: 601px) {
+.productive-image,
+.info-text {
+  width: calc(50% - 40px);
+}
+.productive-image {
+  margin-right: 40px;
+}
+}
+.container.testimonials {
+  
+  padding-bottom: 150px;
+}
+
+.testimonial {
+background-image: url(../images/bg-quotes.png);
+background-position: top left 15px;
+background-repeat: no-repeat; 
+padding-top: 25px;
+background-size: 30px;
+display: flex;
+flex-flow: row wrap;
+}
+
+.testimonial {
+ width: 100%;
+}
+.testimonial li{
+  background-color: hsl(217, 28%, 15%);
+  font-size: 1rem;
+  padding: 30px 20px;
+  margin: 0px 20px 30px 20px;
+}
+
+@media (min-width: 601px) {
+  .testimonial li {
+    width: calc(33% - 40px);
+  }
+}
+.name {
+  font-weight: bold;
+  font-size: 1.2rem;
+  margin-top: 15px;
+}
+blockquote{ 
+  margin: 10px;
+}
+span {
+  display: block;
+  margin-left: 15px;
+  margin-top: 5px;
+}
+.profile {
+  float: left;
+  border-radius: 50%;
+  margin: 0 10px;
+}
+.subscription {
+  position: relative;
+}
+.signup{
+  width: 90%;
+  background-color: hsl(217, 28%, 15%);
+  display: flex;
+  flex-wrap: wrap;
+  text-align: center;
+  justify-content: center;
+  position: absolute;
+  top: -60px;
+  left: 5%;
+  padding: 40px 20px;
+}
+form {
+  display: flex;
+  flex-flow: row wrap;
+  width: 100%;
+}
+.subscribe{
+  padding: 15px;
+  background-color: hsl(198, 60%, 50%);
+  white-space: nowrap;
+}
+input,
+.subscribe {
+  margin: 20px;
+  width: 100%;
+}
+
+input {
+  border-radius: 25px;
+  padding: 14px 25px;
+  border: none;
+}
+
+@media (min-width: 601px) {
+  .signup {
+    width: 70%;
+    left: 15%;
+  }
+  form {
+    flex-wrap: nowrap;
+  }
+  .subscribe {
+    margin-left: 0;
+    width: calc(45% - 30px);
+  }
+  .input {
+    width: calc(55% - 30px);
+  }
+}
+
+
+::placeholder {
+  color :gray;
+  font-size: 0.9rem;
+  text-align: left;
+}
+footer {
+  background-color: hsl(216, 53%, 9%);
+  padding-top: 330px;
+  padding-bottom: 50px;
+}
+
+.main-footer{
+margin-top: 30px;
+}
+.location {
+margin-bottom: 25px;
+}
+ .contacts {
+  margin-bottom: 50px;
+}
+.contacts ul {
+  margin: 0;
+}
+.contacts li:last-child {
+  margin-top: 25px;
+}
+.contact {
+  margin-right: 10px;
+}
+
+.col {
+  display: flex;
+  flex-direction: column;
+  justify-content: left;
+  margin-bottom: 50px;
+}
+
+.col,
+.contacts {
+  display: flex;
+  align-content: flex-start;
+  width: 100%;
+}
+.col ul {
+ 
+  margin-bottom: 30px;
+}
+.col li {
+  font-size: 1.4rem;
+  line-height: 2.2rem;
+}
+
+.social {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  
+}
+.social-icons {
+  display: flex;
+  width: 25%;
+  justify-content: space-between;
+}
+
+@media (min-width: 601px) {
+ 
+  .main-footer {
+    display: flex;
+    flex-direction: row;
+  }
+  .footer-nav {
+    flex-direction: row;
+    
+  }
+    .location,
+    .contacts,
+    .col,
+    .social {
+      flex-grow: 1; 
+    }
+.location,
+.contacts,
+.col {
+      margin-right: 40px;
+  }
+    .location 
+    .contacts{
+      width:calc(30%-20px);
+      }
+    
+   .col,
+    .social-icons {
+      width: calc( 33% - 40px);
+    } 
+    .social-icons li {
+      margin-left: 10px;
+    }
+}
+
+.attribution { font-size: 11px; text-align: center; }
+    .attribution a { color: hsl(228, 45%, 44%); }
