@@ -1,18 +1,7 @@
 An HTML & CSS solution to Frontendmentor Fylo landing page challenge. 
 The task was to build out the project to the designs given in a static JPEG format ( a mobile and a desktop version) and a style-guide.md provided, with required assets provided.
 
-
-
-# Frontend Mentor - Fylo landing page with dark theme and features grid
-
-![Design preview for the Fylo landing page with dark theme and features grid challenge](./design/desktop-preview.jpg)
-
-
-## Building your project
-
-Practice using version control by creating your own GitHub repository for this challenge. This has the added benefit of being able to publish the site for free on GitHub Pages. Find out more about GitHub Pages here: [https://pages.github.com](https://pages.github.com).
-
-Also, you could try building this project in a team. This is a great way to practice collaborative coding.
+### ✨ [Demo](https://nataliakiselev.github.io/Fylo)
 
 
 
